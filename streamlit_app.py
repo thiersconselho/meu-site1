@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import plotly.express as px
 from datetime import datetime
 
 # ------------------------------------------------
@@ -131,34 +130,11 @@ with aba1:
 
     st.subheader("Vendas ao longo do tempo")
 
-    fig = px.line(
-        df,
-        x="Dia",
-        y="Vendas",
-        markers=True,
-        title="Evolução das Vendas"
-    )
-
-    st.plotly_chart(
-        fig,
-        use_container_width=True
-    )
+  
 
     st.subheader("Lucro")
 
-    fig2 = px.bar(
-        df,
-        x="Dia",
-        y="Lucro",
-        color="Lucro",
-        title="Lucro por Dia"
-    )
-
-    st.plotly_chart(
-        fig2,
-        use_container_width=True
-    )
-
+  
 # ------------------------------------------------
 # ABA DADOS
 # ------------------------------------------------
